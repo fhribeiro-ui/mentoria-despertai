@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mentoria Despertai</title>
+<meta name="description" content="Escola de mulheres com Cecília Couto. Sete módulos em aulas gravadas e um encontro ao vivo toda semana.">
+<meta property="og:title" content="Mentoria Despertai">
+<meta property="og:description" content="Aulas gravadas e um encontro ao vivo por semana com Cecília Couto, para a mulher que continua servindo e faz tempo que não sente nada.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@400;500;600;700&family=Great+Vibes&display=swap">
+<style>
+:root{
+  color-scheme: light;
+
+  /* Paleta lida da identidade da Cecília: creme de papel, brasa, chama, tição */
+  --creme:#FBF3E6;
+  --creme-2:#F5E7D3;
+  --creme-3:#EFDCC2;
+  --ticao:#3A1E12;
+  --ticao-2:#241209;
+  --brasa:#8E2E17;
+  --chama:#E3801F;
+  --chama-clara:#F5AC4C;
+  --dourado:#C98B3A;
+  --fumaca:#8A6A55;          /* neutro quente puxado pro tijolo, não cinza */
+  --fumaca-clara:#CDB49A;
+  --linha:rgba(58,30,18,.16);
+  --linha-escura:rgba(245,172,76,.24);
+
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:"Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --script:"Great Vibes", "Cormorant Garamond", cursive;
+
+  --medida:36rem;
+  --larga:66rem;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:var(--creme);
+  color:var(--ticao);
+  font-family:var(--sans);
+  font-size:16.5px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.14;margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+strong{font-weight:600}
+img{display:block;max-width:100%}
+
+/* ─────────── estrutura ─────────── */
+.faixa{padding:clamp(3.75rem,9vw,6.5rem) 1.5rem}
+.medida{max-width:var(--medida);margin-inline:auto;display:flex;flex-direction:column;gap:1.3rem}
+.larga{max-width:var(--larga);margin-inline:auto}
+.creme-2{background:var(--creme-2)}
+
+.olho{
+  font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;
+  font-weight:700;color:var(--brasa)
+}
+h2{font-size:clamp(1.95rem,5vw,3rem)}
+h3{font-size:1.4rem}
+.lead{font-size:1.13rem;line-height:1.68}
+.discreto{color:var(--fumaca);font-size:.93rem;line-height:1.65}
+
+/* ─────────── chama de fundo (a assinatura da marca) ─────────── */
+.com-chama{position:relative;overflow:hidden}
+.com-chama::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(46% 78% at 96% 62%, rgba(227,128,31,.55) 0%, rgba(245,172,76,.28) 38%, rgba(251,243,230,0) 72%),
+    radial-gradient(30% 46% at 88% 96%, rgba(142,46,23,.30) 0%, rgba(251,243,230,0) 70%);
+}
+.com-chama > *{position:relative;z-index:1}
+
+/* ─────────── topo ─────────── */
+.topo{
+  background:var(--creme);
+  padding:clamp(2.5rem,6vw,4.25rem) 1.5rem clamp(3.5rem,8vw,5.5rem);
+  border-bottom:1px solid var(--linha);
+}
+.selo{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--dourado)}
+.wordmark{margin:1.5rem 0 0;display:block}
+.wordmark .mentoria{
+  display:block;font-family:var(--script);font-size:clamp(2rem,6vw,3.1rem);
+  color:var(--brasa);line-height:1;margin-bottom:-.12em
+}
+.wordmark .despertai{
+  display:block;font-family:var(--serif);font-weight:400;
+  font-size:clamp(2.9rem,13vw,6.2rem);line-height:.95;
+  letter-spacing:.02em;color:var(--ticao);text-transform:uppercase
+}
+.gancho{
+  font-family:var(--serif);font-size:clamp(1.5rem,4.4vw,2.2rem);line-height:1.26;
+  max-width:19ch;margin:2.3rem 0 0;color:var(--ticao)
+}
+.gancho em{font-style:italic;color:var(--brasa)}
+.sub-topo{max-width:40ch;margin-top:1.15rem;color:var(--fumaca);font-size:1.02rem}
+
+/* ─────────── botão ─────────── */
+.cta{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:var(--brasa);color:var(--creme);text-decoration:none;
+  font-family:var(--sans);font-weight:600;font-size:.98rem;letter-spacing:.02em;
+  padding:1.05rem 2.15rem;border:1px solid var(--brasa);border-radius:2px;
+  transition:background .18s ease,border-color .18s ease,transform .18s ease;
+}
+.cta:hover{background:var(--chama);border-color:var(--chama);transform:translateY(-1px)}
+.cta:focus-visible{outline:3px solid var(--chama);outline-offset:3px}
+.cta-nota{font-size:.86rem;color:var(--fumaca)}
+.grupo-cta{display:flex;flex-direction:column;gap:.75rem;align-items:flex-start;margin-top:2.2rem}
+
+/* ─────────── a ignição: único bloco escuro ─────────── */
+.ignicao{
+  background:
+    radial-gradient(66% 116% at 50% 122%, var(--chama) 0%, var(--brasa) 32%, rgba(36,18,9,0) 72%),
+    var(--ticao-2);
+  text-align:center;padding:clamp(4.5rem,12vw,8rem) 1.5rem;
+}
+.chama-marca{display:block;margin:0 auto;width:22px;height:31px}
+.versiculo{
+  font-family:var(--serif);font-weight:300;
+  font-size:clamp(1.8rem,5.4vw,3.25rem);line-height:1.25;
+  color:var(--creme);max-width:18ch;margin:1.5rem auto 0
+}
+.ref{
+  display:block;margin-top:1.6rem;font-family:var(--sans);font-weight:700;
+  font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--chama-clara)
+}
+.glosa{max-width:36ch;margin:1.9rem auto 0;color:var(--fumaca-clara);font-size:.96rem}
+
+/* ─────────── ficha ─────────── */
+.ficha{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));
+  gap:1px;background:var(--linha);border:1px solid var(--linha);margin-top:.9rem
+}
+.ficha > div{background:var(--creme);padding:1.05rem 1.15rem}
+.creme-2 .ficha > div{background:var(--creme-2)}
+.ficha dt{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--fumaca);font-weight:700}
+.ficha dd{margin:.3rem 0 0;font-size:1rem;font-weight:500;line-height:1.45}
+
+/* ─────────── a grade ─────────── */
+.grade{margin-top:1rem;border-top:1px solid var(--linha)}
+.encontro{
+  display:grid;grid-template-columns:2.9rem 1fr;gap:1.1rem;
+  padding:1.35rem 0;border-bottom:1px solid var(--linha);align-items:start
+}
+.encontro .n{
+  font-family:var(--serif);font-size:1.85rem;line-height:1.1;color:var(--chama);
+  font-variant-numeric:tabular-nums
+}
+.encontro h3{font-size:1.28rem;margin-bottom:.25rem}
+.encontro p{color:var(--fumaca);font-size:.95rem;line-height:1.6}
+
+/* ─────────── quem conduz ─────────── */
+.autora{display:grid;grid-template-columns:minmax(0,14rem) 1fr;gap:2.4rem;align-items:start;margin-top:1.6rem}
+@media (max-width:660px){.autora{grid-template-columns:1fr;gap:1.6rem}}
+.retrato{
+  aspect-ratio:1;border-radius:50%;border:2px solid var(--chama);
+  background:var(--creme-3);display:grid;place-items:center;text-align:center;
+  padding:1.2rem;color:var(--fumaca);font-size:.78rem;line-height:1.45
+}
+.livros{display:flex;flex-direction:column;gap:.55rem;margin-top:.5rem;padding-top:1.2rem;border-top:1px solid var(--linha)}
+.livro{display:flex;gap:.65rem;align-items:baseline;font-size:.97rem}
+.livro .marcador{color:var(--chama);font-size:.8rem;flex:none}
+
+/* ─────────── investimento ─────────── */
+.planos{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1px;background:var(--linha);border:1px solid var(--linha);margin-top:.8rem}
+.plano{background:var(--creme);padding:1.75rem 1.6rem;display:flex;flex-direction:column;gap:.4rem}
+.plano.destaque{background:var(--ticao-2);color:var(--creme-2)}
+.plano .rotulo{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--fumaca)}
+.plano.destaque .rotulo{color:var(--chama-clara)}
+.plano .valor{font-family:var(--serif);font-size:clamp(2.2rem,6vw,3rem);line-height:1.05;color:var(--ticao)}
+.plano.destaque .valor{color:var(--creme)}
+.plano .obs{font-size:.88rem;color:var(--fumaca);line-height:1.55}
+.plano.destaque .obs{color:var(--fumaca-clara)}
+.economia{
+  align-self:flex-start;margin-top:.35rem;font-size:.72rem;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;
+  background:var(--chama);color:var(--ticao-2);padding:.28rem .6rem;border-radius:2px
+}
+
+.garantia{border-left:3px solid var(--chama);padding:.4rem 0 .4rem 1.5rem;display:flex;flex-direction:column;gap:.7rem}
+.aviso-legal{
+  background:var(--creme-3);border:1px solid var(--linha);padding:1.15rem 1.25rem;
+  font-size:.89rem;line-height:1.65;color:var(--ticao)
+}
+
+/* ─────────── perguntas ─────────── */
+.faq{margin-top:.7rem;border-top:1px solid var(--linha)}
+.faq details{border-bottom:1px solid var(--linha)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:1.1rem 2.2rem 1.1rem 0;position:relative;
+  font-weight:500;font-size:1rem
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:.25rem;top:.85rem;
+  font-family:var(--serif);font-size:1.55rem;line-height:1;color:var(--chama)
+}
+.faq details[open] summary::after{content:"–"}
+.faq summary:focus-visible{outline:2px solid var(--chama);outline-offset:3px}
+.faq .resposta{padding:0 0 1.25rem;color:var(--fumaca);font-size:.95rem;max-width:54ch}
+
+/* ─────────── fecho ─────────── */
+.fecho{
+  text-align:center;padding:clamp(4rem,10vw,7rem) 1.5rem;
+  background:linear-gradient(175deg,var(--creme) 0%,var(--creme-2) 45%,var(--creme-3) 100%);
+  border-top:1px solid var(--linha)
+}
+.fecho .frase{
+  font-family:var(--serif);font-size:clamp(1.85rem,5.4vw,3.1rem);line-height:1.22;
+  max-width:17ch;margin:0 auto 2.2rem;color:var(--ticao);text-wrap:balance
+}
+
+/* ─────────── rodapé ─────────── */
+footer{background:var(--ticao-2);color:var(--fumaca-clara);padding:3rem 1.5rem;font-size:.85rem}
+footer .larga{display:flex;flex-direction:column;gap:.6rem}
+footer a{color:var(--chama-clara)}
+footer .assinatura{color:var(--creme-2);font-family:var(--serif);font-size:1.35rem}
+
+/* ─────────── marcadores do que falta ─────────── */
+.falta{
+  background:rgba(227,128,31,.16);border-bottom:2px dashed var(--brasa);
+  color:var(--brasa);font-weight:700;font-size:.92em;padding:0 .28em;border-radius:2px
+}
+.ignicao .falta,.plano.destaque .falta,footer .falta{
+  background:rgba(245,172,76,.18);color:var(--chama-clara);border-bottom-color:var(--chama-clara)
+}
+.falta-bloco{
+  border:2px dashed var(--brasa);background:rgba(227,128,31,.07);
+  padding:1rem 1.15rem;color:var(--brasa);font-size:.9rem;line-height:1.6;
+  display:flex;flex-direction:column;gap:.4rem
+}
+.falta-tag{
+  font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;
+  color:var(--creme);background:var(--brasa);align-self:flex-start;padding:.2em .6em;border-radius:2px
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important;transition:none !important}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ 1 · TOPO ═══════════ -->
+<header class="topo com-chama">
+  <div class="larga">
+    <p class="selo">Com Cecília Couto</p>
+
+    <h1 class="wordmark">
+      <span class="mentoria">Mentoria</span>
+      <span class="despertai">Despertai</span>
+    </h1>
+
+    <p class="gancho">Tem mulher que está de pé na igreja e <em>dormindo por dentro</em>.</p>
+
+    <p class="sub-topo">Sete módulos em aulas gravadas e um encontro ao vivo com a Cecília toda semana — para despertar, se posicionar e edificar a própria casa.</p>
+
+    <div class="grupo-cta">
+      <a class="cta" data-cta href="#investimento">Quero entrar na mentoria</a>
+      <p class="cta-nota">A partir de R$&nbsp;49 por mês · certificado de conclusão</p>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════ 2 · O RECONHECIMENTO ═══════════ -->
+<section class="faixa creme-2">
+  <div class="medida">
+    <p class="olho">O que ninguém percebe</p>
+    <h2>Você não está fria. Você está cansada.</h2>
+
+    <p class="lead">Você chega no horário. Serve no ministério. Abre a Bíblia porque é o certo, lê três capítulos e fecha sem ter ouvido nada.</p>
+
+    <p>Por fora está tudo em ordem. Por dentro, faz meses que você ora pedindo perdão pela mesma coisa: por não sentir mais.</p>
+
+    <p>E aí vem a culpa — que é justamente o que te mantém de pé e exausta ao mesmo tempo. Você acha que se afastou. Você acha que é falta de fé.</p>
+
+    <p><strong>Não é.</strong> Secura não é frieza. Secura é o que acontece com quem deu, deu, deu, e não teve para onde voltar.</p>
+  </div>
+</section>
+
+<!-- ═══════════ 3 · A IGNIÇÃO ═══════════ -->
+<section class="ignicao">
+  <svg class="chama-marca" viewBox="0 0 22 31" fill="none" aria-hidden="true">
+    <path d="M11 0c.7 6-3.4 8.1-5.2 11.7C4.1 15.8 3.3 18.4 3.3 20.6 3.3 26.6 7.7 31 11 31s7.7-4.4 7.7-10.4c0-4-2.3-6.9-4.4-9.6-1.2 1.6-1.6 3.3-1.6 3.3S14.6 7 11 0Z" fill="#F5AC4C"/>
+    <path d="M11 31c-2.2 0-4-2.4-4-5.4 0-3.2 2.7-4.7 3.7-8 1.9 2.5 4.3 4.4 4.3 8 0 3-1.8 5.4-4 5.4Z" fill="#FBF3E6"/>
+  </svg>
+
+  <p class="versiculo">“Desperte, você que está dormindo, levante-se dentre os mortos, e Cristo te iluminará.”</p>
+  <span class="ref">Efésios 5.14</span>
+
+  <p class="glosa">Repare que não é convite. É ordem. E ordem só se dá a quem tem condição de obedecer.</p>
+</section>
+
+<!-- ═══════════ 4 · O QUE É ═══════════ -->
+<section class="faixa">
+  <div class="medida">
+    <p class="olho">A escola</p>
+    <h2>O que é a Mentoria Despertai</h2>
+
+    <p class="lead">A Mentoria Despertai é um chamado profético ao posicionamento da Noiva de Cristo — mulheres alinhadas e posicionadas para despertar outras mulheres.</p>
+
+    <p>A escola tem duas partes que andam juntas. <strong>Os sete módulos</strong>, com várias aulas gravadas cada um, que você assiste no seu ritmo e revê quantas vezes precisar. E <strong>o encontro ao vivo com a Cecília, toda semana</strong>, onde o que foi estudado vira conversa, oração e direção.</p>
+
+    <p>Não tem turma para esperar. Você entra, recebe a biblioteca inteira e já participa do próximo encontro. São <strong>doze meses de acesso</strong> para percorrer tudo.</p>
+
+    <dl class="ficha">
+      <div><dt>Aulas</dt><dd>Gravadas, várias por módulo</dd></div>
+      <div><dt>Módulos</dt><dd>7, na ordem da escada</dd></div>
+      <div><dt>Ao vivo</dt><dd>1 encontro por semana, com a Cecília</dd></div>
+      <div><dt>Quando</dt><dd><span class="falta">dia e horário</span></dd></div>
+      <div><dt>Você começa</dt><dd>Assim que entra</dd></div>
+      <div><dt>Encontro gravado</dt><dd><span class="falta">confirmar</span></dd></div>
+      <div><dt>Acesso</dt><dd>1 ano</dd></div>
+      <div><dt>Ao final</dt><dd>Certificado de conclusão</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ═══════════ 5 · A GRADE ═══════════ -->
+<section class="faixa creme-2">
+  <div class="medida">
+    <p class="olho">Os sete módulos, em ordem</p>
+    <h2>A escada</h2>
+    <p class="discreto">Cada módulo reúne várias aulas gravadas e é consequência do anterior. Não dá para se posicionar antes de despertar, nem para colher antes de interceder.</p>
+
+    <div class="falta-bloco">
+      <span class="falta-tag">Cecília precisa aprovar</span>
+      As linhas abaixo de cada encontro são sugestão minha, escritas a partir do nome do módulo e da linguagem dela. Ela troca por como realmente ensina cada um.
+    </div>
+
+    <div class="grade">
+      <article class="encontro">
+        <span class="n">1</span>
+        <div>
+          <h3>Despertadas</h3>
+          <p>Reconhecer o próprio sono. O começo não é esforço — é despertar.</p>
+        </div>
+      </article>
+      <article class="encontro">
+        <span class="n">2</span>
+        <div>
+          <h3>Ativadas no propósito</h3>
+          <p>Sair do automático e descobrir para que Deus te chamou nesta geração.</p>
+        </div>
+      </article>
+      <article class="encontro">
+        <span class="n">3</span>
+        <div>
+          <h3>Posicionadas</h3>
+          <p>Ocupar o lugar que já é seu como Noiva de Cristo, sem pedir licença.</p>
+        </div>
+      </article>
+      <article class="encontro">
+        <span class="n">4</span>
+        <div>
+          <h3>As colunas da sabedoria</h3>
+          <p>O que sustenta a casa quando a emoção passa: fundamento, discernimento e maturidade.</p>
+        </div>
+      </article>
+      <article class="encontro">
+        <span class="n">5</span>
+        <div>
+          <h3>Intercessão profética</h3>
+          <p>Orar com a autoridade de quem aprendeu a reconhecer a voz do Pai.</p>
+        </div>
+      </article>
+      <article class="encontro">
+        <span class="n">6</span>
+        <div>
+          <h3>Tempo de colheita</h3>
+          <p>O que vem depois da obediência — e como não desperdiçar a colheita.</p>
+        </div>
+      </article>
+      <article class="encontro">
+        <span class="n">7</span>
+        <div>
+          <h3>Família sacerdotal enraizada em Cristo</h3>
+          <p>Levar o avivamento para dentro de casa. O despertar não termina em você.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 6 · QUEM CONDUZ ═══════════ -->
+<section class="faixa com-chama">
+  <div class="larga">
+    <p class="olho">Quem conduz</p>
+    <h2>Cecília Couto</h2>
+
+    <div class="autora">
+      <div class="retrato">
+        <span>Foto da Cecília<br>(quadrada, rosto centralizado)</span>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:1.15rem">
+        <p>Casada com Gilberto há 20 anos, com quem vive o propósito de Deus. Doutora com formação em Nutrição, entregou-se por completo ao chamado do Senhor.</p>
+
+        <p>Mentora do Despertai de Mulheres e voz profética do avivamento desta geração. Carrega a mensagem profética do despertar de mulheres e de famílias sacerdotais, firmadas em Cristo. Com ousadia do Espírito Santo, proclama as virtudes de Cristo e convoca uma geração a viver em intimidade profunda com Deus, maturidade espiritual e obediência à Sua vontade.</p>
+
+        <div class="livros">
+          <p class="olho" style="margin-bottom:.35rem">Autora de</p>
+          <p class="livro"><span class="marcador">◆</span> <span><em>Um Lar Edificado sobre a Rocha</em></span></p>
+          <p class="livro"><span class="marcador">◆</span> <span><em>Família Sacerdotal Enraizada em Cristo</em> — que dá nome ao sétimo encontro da escola.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 7 · INVESTIMENTO ═══════════ -->
+<section class="faixa creme-2" id="investimento">
+  <div class="medida">
+    <p class="olho">Investimento</p>
+    <h2>Entrar na mentoria</h2>
+
+    <div class="planos">
+      <div class="plano">
+        <span class="rotulo">Mensal</span>
+        <p class="valor">R$ 49</p>
+        <p class="obs">por mês, na recorrência. Cartão ou Pix recorrente. Você cancela quando quiser.</p>
+      </div>
+      <div class="plano destaque">
+        <span class="rotulo">Anual</span>
+        <p class="valor">R$ 497</p>
+        <p class="obs">à vista ou em até 12× no cartão. Um ano inteiro de acesso.</p>
+        <span class="economia">Economiza R$ 91</span>
+      </div>
+    </div>
+
+    <div class="grupo-cta" style="margin-top:1.8rem">
+      <a class="cta" data-cta href="#">Quero minha vaga</a>
+      <p class="cta-nota">Pagamento pela Kiwify · acesso liberado assim que o pagamento é aprovado</p>
+    </div>
+
+    <div class="garantia" style="margin-top:2.4rem">
+      <h3>Sete dias para desistir, sem precisar explicar</h3>
+      <p class="discreto">Você entra, participa, percorre o material. Se em até 7 dias entender que não é para você, escreve para <span class="falta">e-mail de contato</span> e o valor volta integral — sem justificativa e sem constrangimento. É o que a lei garante (art. 49 do Código de Defesa do Consumidor) e é como trabalhamos.</p>
+    </div>
+
+    <div class="aviso-legal" style="margin-top:1.6rem">
+      <strong>Sobre o certificado:</strong> ao concluir os sete módulos você recebe um certificado de conclusão. A Mentoria Despertai é um <strong>curso livre</strong>, de formação pessoal e espiritual — não é curso técnico nem superior, não é reconhecida pelo MEC e não habilita ao exercício de nenhuma profissão.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 8 · PERGUNTAS ═══════════ -->
+<section class="faixa">
+  <div class="medida">
+    <p class="olho">Antes de decidir</p>
+    <h2>Perguntas que sempre chegam</h2>
+
+    <div class="faq">
+      <details open>
+        <summary>Preciso esperar abrir turma?</summary>
+        <div class="resposta">Não. Assim que o pagamento é aprovado você recebe as aulas gravadas dos sete módulos e já entra no próximo encontro ao vivo — não importa em que ponto da escada a turma esteja, porque cada uma percorre no seu ritmo.</div>
+      </details>
+      <details>
+        <summary>Quando é o encontro ao vivo?</summary>
+        <div class="resposta"><span class="falta">Toda [dia], às [hora].</span> É uma vez por semana, com a Cecília, e é onde o conteúdo das aulas vira conversa, oração e direção.</div>
+      </details>
+      <details>
+        <summary>E se eu perder o encontro ao vivo?</summary>
+        <div class="resposta"><span class="falta">Confirmar: o encontro ao vivo fica gravado na área de membros?</span> As aulas dos módulos são gravadas e ficam sempre disponíveis — essas você assiste quando quiser.</div>
+      </details>
+      <details>
+        <summary>Por quanto tempo tenho acesso?</summary>
+        <div class="resposta">Um ano, contado da sua entrada. Nesse período você pode rever todas as aulas e participar de todos os encontros ao vivo.</div>
+      </details>
+      <details>
+        <summary>O certificado vale como curso técnico ou faculdade?</summary>
+        <div class="resposta">Não. É um certificado de conclusão de curso livre, de formação pessoal e espiritual. Não é reconhecido pelo MEC e não habilita ao exercício de profissão.</div>
+      </details>
+      <details>
+        <summary>Como funciona o pagamento? Posso cancelar?</summary>
+        <div class="resposta">No plano mensal a cobrança é recorrente, em cartão ou Pix, e você cancela quando quiser — o acesso segue até o fim do mês já pago. No plano anual você paga uma vez, à vista ou em até 12× no cartão.</div>
+      </details>
+      <details>
+        <summary>Preciso ficar com a câmera aberta no encontro?</summary>
+        <div class="resposta"><span class="falta">Confirmar com a Cecília: o encontro ao vivo é em formato de aula (só ela na tela) ou de roda, com as alunas participando?</span></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 9 · FECHO ═══════════ -->
+<section class="fecho com-chama">
+  <p class="frase">Se você se reconheceu, não foi coincidência.</p>
+  <a class="cta" data-cta href="#investimento">Quero entrar na mentoria</a>
+  <p class="cta-nota" style="margin-top:1rem">7 dias de garantia · um ano de acesso</p>
+</section>
+
+<footer>
+  <div class="larga">
+    <p class="assinatura">Mentoria Despertai</p>
+    <p>Uma escola de Cecília Couto.</p>
+    <p style="margin-top:.5rem"><span class="falta">Razão social · CNPJ · endereço</span></p>
+    <p>Contato: <span class="falta">e-mail</span> · <span class="falta">WhatsApp</span></p>
+    <p style="margin-top:.5rem"><a href="#">Política de privacidade</a> · <a href="#">Termos de uso</a></p>
+    <p style="margin-top:.7rem;font-size:.78rem;opacity:.72">Pagamento processado pela Kiwify. Curso livre — não reconhecido pelo MEC. Este site não é afiliado ao Facebook, ao Instagram ou ao Google.</p>
+  </div>
+</footer>
+
+<script>
+/* ──────────────────────────────────────────────────────────
+   ÚNICO LUGAR PARA LIGAR O CHECKOUT.
+   Cole entre as aspas o link que a Kiwify gerar para a
+   Mentoria Despertai (Produto → Ofertas → copiar link).
+   Todos os botões da página passam a apontar para ele.
+   A conta da imersão já é kiwify — o link tem esta cara:
+   https://pay.kiwify.com.br/xxxxxxx
+   ────────────────────────────────────────────────────────── */
+var CHECKOUT = "";
+
+document.querySelectorAll("[data-cta]").forEach(function (botao) {
+  var destino = botao.getAttribute("href");
+
+  if (CHECKOUT) {
+    botao.href = CHECKOUT;
+    botao.rel = "noopener";
+    return;
+  }
+
+  // Sem link ainda: o botão de compra avisa em vez de não fazer nada.
+  if (destino === "#") {
+    botao.addEventListener("click", function (evento) {
+      evento.preventDefault();
+      alert(
+        "O link do checkout ainda nao foi colado.\n\n" +
+        "Abra o index.html, procure a linha  var CHECKOUT = \"\"  " +
+        "e cole ali o link da Kiwify."
+      );
+    });
+  }
+});
+</script>
+
+</body>
+</html>
