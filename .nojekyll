@@ -1,0 +1,3 @@
+Este arquivo desliga o Jekyll no GitHub Pages.
+Sem ele o GitHub tenta "construir" o site e falha; com ele os arquivos
+sao servidos como estao, que e o que a gente quer (HTML puro).
