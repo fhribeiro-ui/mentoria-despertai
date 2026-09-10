@@ -6,33 +6,33 @@
 <title>Mentoria Despertai</title>
 <meta name="description" content="Escola de mulheres com Cecília Couto. Sete módulos em aulas gravadas e um encontro ao vivo toda semana.">
 <meta property="og:title" content="Mentoria Despertai">
-<meta property="og:description" content="Aulas gravadas e um encontro ao vivo por semana com Cecília Couto, para a mulher que continua servindo e faz tempo que não sente nada.">
+<meta property="og:description" content="Um chamado para viver o propósito do despertar das filhas de Deus. Sete módulos gravados e um encontro ao vivo por semana com Cecília Couto.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600;1,700&family=Montserrat:wght@400;500;600;700;800&display=swap">
 <style>
 :root{
   color-scheme: light;
 
-  /* Paleta do folder da Cecília: marfim, pergaminho, ouro, a chama da lamparina */
-  --creme:#FDF8EF;           /* marfim do papel */
-  --creme-2:#F8EFDC;
-  --creme-3:#F1E3C6;         /* pergaminho */
-  --ticao:#3D2A16;           /* marrom quente do texto */
-  --ticao-2:#2A1C0C;
-  --brasa:#A87519;           /* ouro escuro, onde antes era o tijolo */
-  --chama:#C9962E;           /* ouro */
-  --chama-clara:#E7CB86;     /* brilho */
-  --dourado:#C9962E;
-  --fogo:#E8A33C;            /* a chama da lamparina */
-  --fumaca:#8B7859;          /* neutro quente puxado pro ouro, não cinza */
-  --fumaca-clara:#D8C6A2;
-  --linha:rgba(168,117,25,.30);
-  --linha-escura:rgba(231,203,134,.30);
+  /* Paleta da arte 9x16 da Imersão: creme quente, brasa, chama, tição */
+  --creme:#FBF3E6;
+  --creme-2:#F5E7D3;
+  --creme-3:#EFDCC2;
+  --ticao:#3A1E12;
+  --ticao-2:#241209;
+  --brasa:#9C3016;           /* o tijolo do "D" da arte */
+  --chama:#E8802C;
+  --chama-clara:#F5AC4C;
+  --dourado:#C98B3A;
+  --fogo:#E8802C;
+  --fumaca:#8A6A55;
+  --fumaca-clara:#CDB49A;
+  --linha:rgba(58,30,18,.22);
+  --linha-escura:rgba(245,172,76,.26);
 
   --serif:"Playfair Display", Georgia, "Times New Roman", serif;
-  --sans:"Lora", Georgia, "Times New Roman", serif;
+  --sans:"Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --medida:36rem;
   --larga:66rem;
@@ -45,11 +45,11 @@ body{
   background:var(--creme);
   color:var(--ticao);
   font-family:var(--sans);
-  font-size:17px;
-  line-height:1.8;
+  font-size:16.5px;
+  line-height:1.75;
   -webkit-font-smoothing:antialiased;
 }
-h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.16;margin:0;text-wrap:balance;letter-spacing:.005em}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
 p{margin:0}
 a{color:inherit}
 strong{font-weight:600}
@@ -62,8 +62,8 @@ img{display:block;max-width:100%}
 .creme-2{background:var(--creme-2)}
 
 .olho{
-  font-family:var(--serif);font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;
-  font-weight:600;color:var(--brasa)
+  font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;
+  font-weight:700;color:var(--brasa)
 }
 h2{font-size:clamp(1.95rem,5vw,3rem)}
 h3{font-size:1.4rem}
@@ -75,8 +75,8 @@ h3{font-size:1.4rem}
 .com-chama::after{
   content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
   background:
-    radial-gradient(48% 80% at 95% 60%, rgba(231,203,134,.65) 0%, rgba(201,150,46,.22) 40%, rgba(253,248,239,0) 74%),
-    radial-gradient(34% 50% at 86% 97%, rgba(201,150,46,.26) 0%, rgba(253,248,239,0) 72%);
+    radial-gradient(46% 78% at 96% 62%, rgba(232,128,44,.52) 0%, rgba(245,172,76,.26) 38%, rgba(251,243,230,0) 72%),
+    radial-gradient(30% 46% at 88% 96%, rgba(156,48,22,.28) 0%, rgba(251,243,230,0) 70%);
 }
 .com-chama > *{position:relative;z-index:1}
 
@@ -86,39 +86,32 @@ h3{font-size:1.4rem}
   padding:clamp(2.5rem,6vw,4.25rem) 1.5rem clamp(3.5rem,8vw,5.5rem);
   border-bottom:1px solid var(--linha);
 }
-.selo{font-family:var(--serif);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--brasa)}
+.selo{font-family:var(--sans);font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--brasa)}
 .wordmark{margin:1.5rem 0 0;display:block}
 .wordmark .despertai{
-  display:block;font-family:var(--serif);font-weight:700;
-  font-size:clamp(1.9rem,8.4vw,4.6rem);line-height:1.05;
-  letter-spacing:.05em;text-transform:uppercase;color:#A87519;
-  background:linear-gradient(172deg,#EBD9A6 0%,#C9962E 44%,#8F6212 100%);
-  -webkit-background-clip:text;background-clip:text;
-  -webkit-text-fill-color:transparent;
+  display:block;font-family:var(--serif);font-weight:900;
+  font-size:clamp(2rem,8.8vw,4.9rem);line-height:1;
+  letter-spacing:.01em;text-transform:uppercase;color:var(--ticao);
 }
 .wordmark .legenda{
-  display:block;margin-top:1rem;font-family:var(--serif);font-weight:500;
-  font-size:clamp(.62rem,1.8vw,.86rem);letter-spacing:.24em;text-transform:uppercase;
+  display:block;margin-top:1rem;font-family:var(--sans);font-weight:700;
+  font-size:clamp(.6rem,1.7vw,.8rem);letter-spacing:.26em;text-transform:uppercase;
   color:var(--brasa);line-height:1.6
 }
-.gancho{
-  font-family:var(--serif);font-weight:700;font-size:clamp(1.5rem,4.4vw,2.2rem);line-height:1.2;
-  max-width:19ch;margin:2.3rem 0 0;color:var(--ticao)
+.chamado{
+  font-family:var(--serif);font-weight:600;
+  font-size:clamp(1.18rem,3.1vw,1.62rem);line-height:1.46;
+  max-width:37ch;margin:2.2rem 0 0;color:var(--ticao)
 }
-.gancho em{font-style:italic;color:var(--brasa)}
-.tese{
-  max-width:32ch;margin-top:1.5rem;color:var(--brasa);
-  font-family:var(--serif);font-style:italic;font-weight:600;
-  font-size:clamp(1.08rem,2.9vw,1.35rem);line-height:1.45
-}
+.chamado em{font-style:italic;color:var(--brasa)}
 .sub-topo{max-width:42ch;margin-top:1.15rem;color:var(--fumaca);font-size:1rem}
 
 /* emblemas recortados do folder da Cecília */
 .emblema-chama{display:block;margin:0 auto;width:24px;height:34px}
 
-.borboleta-topo{
-  width:clamp(120px,26vw,210px);height:auto;margin:0 0 .4rem;
-  filter:drop-shadow(0 4px 18px rgba(201,150,46,.35))
+.lamparina-topo{
+  height:clamp(170px,30vw,275px);width:auto;margin:0 0 .6rem;
+  filter:drop-shadow(0 6px 26px rgba(232,128,44,.42))
 }
 .filete{
   display:flex;align-items:center;gap:1rem;margin-top:1.1rem;
@@ -163,19 +156,25 @@ h3{font-size:1.4rem}
 .cta{
   display:inline-flex;align-items:center;gap:.55rem;
   background:var(--brasa);color:var(--creme);text-decoration:none;
-  font-family:var(--serif);font-weight:600;font-size:1rem;letter-spacing:.09em;
-  text-transform:uppercase;padding:1.05rem 2.4rem;border:1px solid var(--brasa);border-radius:2px;
+  font-family:var(--sans);font-weight:700;font-size:.92rem;letter-spacing:.04em;
+  padding:1.05rem 2rem;border:2px solid var(--brasa);border-radius:2px;
+  text-align:center;line-height:1.35;max-width:100%;
   transition:background .18s ease,border-color .18s ease,transform .18s ease;
 }
 .cta:hover{background:var(--chama);border-color:var(--chama);color:#2A1C0C;transform:translateY(-1px)}
 .cta:focus-visible{outline:3px solid var(--chama);outline-offset:3px}
-.cta-nota{font-size:.86rem;color:var(--fumaca)}
+.cta-nota{font-size:.86rem;color:var(--fumaca);max-width:34ch}
+.convocacao{
+  font-family:var(--serif);font-weight:700;font-style:italic;
+  font-size:clamp(1.3rem,3.6vw,1.85rem);line-height:1.3;
+  color:var(--brasa);margin-top:.6rem
+}
 .grupo-cta{display:flex;flex-direction:column;gap:.75rem;align-items:flex-start;margin-top:2.2rem}
 
 /* ─────────── a ignição: único bloco escuro ─────────── */
 .ignicao{
   background:
-    radial-gradient(70% 118% at 50% 124%, #E8A33C 0%, #A87519 30%, rgba(42,28,12,0) 74%),
+    radial-gradient(68% 116% at 50% 122%, #F5AC4C 0%, #9C3016 32%, rgba(36,18,9,0) 72%),
     var(--ticao-2);
   text-align:center;padding:clamp(4.5rem,12vw,8rem) 1.5rem;
 }
@@ -197,7 +196,7 @@ h3{font-size:1.4rem}
 }
 .ficha > div{background:var(--creme);padding:1.05rem 1.15rem}
 .creme-2 .ficha > div{background:var(--creme-2)}
-.ficha dt{font-family:var(--serif);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--fumaca);font-weight:600}
+.ficha dt{font-family:var(--sans);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--fumaca);font-weight:700}
 .ficha dd{margin:.3rem 0 0;font-size:1rem;font-weight:500;line-height:1.45}
 
 /* ─────────── a grade ─────────── */
@@ -212,6 +211,29 @@ h3{font-size:1.4rem}
 }
 .encontro h3{font-size:1.3rem;margin-bottom:.3rem}
 .encontro p{color:var(--fumaca);font-size:.95rem;line-height:1.6}
+
+/* o valor fecha a escada */
+.degrau-valor{
+  background:
+    radial-gradient(80% 130% at 88% 120%, rgba(232,128,44,.55) 0%, rgba(36,18,9,0) 70%),
+    var(--ticao-2);
+  padding:1.9rem 1.7rem;margin-top:1.5rem;
+  display:flex;flex-direction:column;gap:.15rem
+}
+.degrau-valor .rotulo-valor{
+  font-family:var(--sans);font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;
+  font-weight:700;color:var(--chama-clara)
+}
+.degrau-valor .preco{
+  font-family:var(--serif);font-weight:900;line-height:1;
+  font-size:clamp(2.3rem,7.5vw,3.4rem);color:var(--creme);
+  margin:.5rem 0 .7rem;letter-spacing:-.02em
+}
+.degrau-valor .preco span{
+  font-family:var(--sans);font-weight:600;font-size:.92rem;letter-spacing:.03em;
+  color:var(--fumaca-clara)
+}
+.degrau-valor p:last-child{color:var(--fumaca-clara);font-size:.95rem;line-height:1.65;max-width:40ch}
 
 /* ─────────── quem conduz ─────────── */
 .autora{display:grid;grid-template-columns:minmax(0,14rem) 1fr;gap:2.4rem;align-items:start;margin-top:1.6rem}
@@ -229,7 +251,7 @@ h3{font-size:1.4rem}
 .planos{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1px;background:var(--linha);border:1px solid var(--linha);margin-top:.8rem}
 .plano{background:var(--creme);padding:1.75rem 1.6rem;display:flex;flex-direction:column;gap:.4rem}
 .plano.destaque{background:var(--ticao-2);color:var(--creme-2)}
-.plano .rotulo{font-family:var(--serif);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--fumaca)}
+.plano .rotulo{font-family:var(--sans);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--fumaca)}
 .plano.destaque .rotulo{color:var(--chama-clara)}
 .plano .valor{font-family:var(--serif);font-weight:900;font-size:clamp(2.2rem,6vw,3rem);line-height:1;letter-spacing:-.02em;color:var(--ticao)}
 .plano.destaque .valor{color:var(--creme)}
@@ -304,14 +326,13 @@ footer .assinatura{color:var(--creme-2);font-family:var(--serif);font-weight:700
 </style>
 </head>
 <body>
-<p style="margin:0;padding:.55rem 1rem;text-align:center;background:#2A1C0C;color:#E7CB86;font:600 .78rem/1.5 Lora,serif;letter-spacing:.04em">Versao OURO &nbsp;·&nbsp; <a href="fogo.html" style="color:#FDF8EF">ver a versao FOGO</a></p>
 
 <!-- ═══════════ 1 · TOPO ═══════════ -->
 <header class="topo com-chama">
   <div class="larga">
     <p class="selo">Com Cecília Couto</p>
 
-    <img class="borboleta-topo" src="borboleta.png" alt="" width="274" height="210">
+    <img class="lamparina-topo" src="lamparina-emblema.png" alt="" width="228" height="725">
 
     <h1 class="wordmark">
       <span class="despertai">Despertai</span>
@@ -320,15 +341,13 @@ footer .assinatura{color:var(--creme-2);font-family:var(--serif);font-weight:700
 
     <p class="filete"><img src="borboleta-divisor.png" alt="" width="59" height="46"></p>
 
-    <p class="gancho">Tem mulher que está de pé na igreja e <em>dormindo por dentro</em>.</p>
-
-    <p class="tese">Um chamado para acender o altar e se preparar para a volta do Noivo.</p>
+    <p class="chamado">Um chamado para viver o propósito do despertar das filhas de Deus que desejam se preparar como a <em>noiva de Cristo</em>, manifestar o reino e estabelecer um legado de fé, renúncia e ativação do chamado.</p>
 
     <p class="sub-topo">Sete módulos em aulas gravadas e um encontro ao vivo com a Cecília toda semana.</p>
 
     <div class="grupo-cta">
-      <a class="cta" data-cta href="#investimento">Quero entrar na mentoria</a>
-      <p class="cta-nota">A partir de R$&nbsp;49 por mês · certificado de conclusão</p>
+      <a class="cta" data-cta href="#investimento">Quero fazer parte do exército Despertai</a>
+      <p class="cta-nota">Aulas gravadas · ao vivo toda segunda, 19h30 · certificado de conclusão</p>
     </div>
   </div>
 </header>
@@ -336,16 +355,20 @@ footer .assinatura{color:var(--creme-2);font-family:var(--serif);font-weight:700
 <!-- ═══════════ 2 · O RECONHECIMENTO ═══════════ -->
 <section class="faixa creme-2">
   <div class="medida">
-    <p class="olho">O que ninguém percebe</p>
-    <h2>Você não está fria. Você está cansada.</h2>
+    <p class="olho">A convocação</p>
+    <h2>Existe um chamado ecoando sobre essa geração.</h2>
 
-    <p class="lead">Você chega no horário. Serve no ministério. Abre a Bíblia porque é o certo, lê três capítulos e fecha sem ter ouvido nada.</p>
+    <p class="lead">Um chamado para despertar da apatia espiritual, do medo e da inconstância. Um chamado para viver uma fé ativa, enraizada em Cristo, e uma vida de relacionamento profundo com o Espírito Santo.</p>
 
-    <p>Por fora está tudo em ordem. Por dentro, faz meses que você ora pedindo perdão pela mesma coisa: por não sentir mais.</p>
+    <p>A Mentoria Despertai nasceu no coração de Deus, com o propósito de despertar mulheres que querem viver o chamado ativado e resplandecer a glória de Cristo.</p>
 
-    <p>E aí vem a culpa — que é justamente o que te mantém de pé e exausta ao mesmo tempo. Você acha que se afastou. Você acha que é falta de fé.</p>
+    <p>Se você quer ser essa mulher despertada, <strong>responda à convocação que o céu está fazendo</strong>.</p>
 
-    <p><strong>Não é.</strong> Secura não é frieza. Secura é o que acontece com quem deu, deu, deu, e não teve para onde voltar.</p>
+    <p class="convocacao">Faça parte do exército Despertai.</p>
+
+    <div class="grupo-cta">
+      <a class="cta" data-cta href="#">Quero fazer parte do exército Despertai</a>
+    </div>
   </div>
 </section>
 
@@ -363,7 +386,7 @@ footer .assinatura{color:var(--creme-2);font-family:var(--serif);font-weight:700
   <p class="versiculo">“Desperte, você que está dormindo, levante-se dentre os mortos, e Cristo te iluminará.”</p>
   <span class="ref">Efésios 5.14</span>
 
-  <p class="glosa">Repare que não é convite. É ordem. E ordem só se dá a quem tem condição de obedecer.</p>
+  <p class="glosa">É uma convocação que o céu está fazendo.</p>
 </section>
 
 <!-- ═══════════ 4 · O QUE É ═══════════ -->
@@ -376,15 +399,19 @@ footer .assinatura{color:var(--creme-2);font-family:var(--serif);font-weight:700
 
     <p>A escola tem duas partes que andam juntas. <strong>Os sete módulos</strong>, com várias aulas gravadas cada um, que você assiste no seu ritmo e revê quantas vezes precisar. E <strong>o encontro ao vivo com a Cecília, toda semana</strong>, onde o que foi estudado vira conversa, oração e direção.</p>
 
-    <p>Não tem turma para esperar. Você entra, recebe a biblioteca inteira e já participa do próximo encontro. São <strong>doze meses de acesso</strong> para percorrer tudo.</p>
+    <p><strong>Não existe turma para esperar.</strong> Assim que o pagamento é aprovado, você recebe por e-mail o acesso à área de membros. Os sete módulos já estão lá, liberados desde o primeiro dia — você não precisa aguardar módulo abrir nem grupo formar.</p>
+
+    <p>Dali em diante o caminho é seu: você assiste às aulas no seu ritmo, na ordem da escada, e volta nelas quantas vezes precisar. Toda segunda-feira, às 19h30, a Cecília encontra o grupo ao vivo — e é ali que o que você estudou vira conversa, oração e direção para a sua vida. Se você entrar hoje, já participa do próximo encontro.</p>
+
+    <p>São <strong>doze meses de acesso</strong> — tempo de sobra para percorrer tudo, rever o que marcou e estar presente em todos os encontros.</p>
 
     <dl class="ficha">
       <div><dt>Aulas</dt><dd>Gravadas, várias por módulo</dd></div>
       <div><dt>Módulos</dt><dd>7, na ordem da escada</dd></div>
       <div><dt>Ao vivo</dt><dd>1 encontro por semana, com a Cecília</dd></div>
-      <div><dt>Quando</dt><dd><span class="falta">dia e horário</span></dd></div>
+      <div><dt>Quando</dt><dd>Segundas, 19h30</dd></div>
       <div><dt>Você começa</dt><dd>Assim que entra</dd></div>
-      <div><dt>Encontro gravado</dt><dd><span class="falta">confirmar</span></dd></div>
+      <div><dt>Encontro gravado</dt><dd>Sim, fica disponível</dd></div>
       <div><dt>Acesso</dt><dd>1 ano</dd></div>
       <div><dt>Ao final</dt><dd>Certificado de conclusão</dd></div>
     </dl>
@@ -398,61 +425,67 @@ footer .assinatura{color:var(--creme-2);font-family:var(--serif);font-weight:700
     <h2>A escada</h2>
     <p class="discreto">Cada módulo reúne várias aulas gravadas e é consequência do anterior. Não dá para se posicionar antes de despertar, nem para colher antes de interceder.</p>
 
-    <div class="falta-bloco">
-      <span class="falta-tag">Cecília precisa aprovar</span>
-      As linhas abaixo de cada encontro são sugestão minha, escritas a partir do nome do módulo e da linguagem dela. Ela troca por como realmente ensina cada um.
-    </div>
 
     <div class="grade">
       <article class="encontro">
         <span class="n">1</span>
         <div>
           <h3>Despertadas</h3>
-          <p>Reconhecer o próprio sono. O começo não é esforço — é despertar.</p>
+          <p>O levantar do sono espiritual.</p>
         </div>
       </article>
       <article class="encontro">
         <span class="n">2</span>
         <div>
           <h3>Ativadas no propósito</h3>
-          <p>Sair do automático e descobrir para que Deus te chamou nesta geração.</p>
+          <p>Ativando seu DNA espiritual e vivendo o chamado.</p>
         </div>
       </article>
       <article class="encontro">
         <span class="n">3</span>
         <div>
           <h3>Posicionadas</h3>
-          <p>Ocupar o lugar que já é seu como Noiva de Cristo, sem pedir licença.</p>
+          <p>Tomando a posição do seu lugar em Deus.</p>
         </div>
       </article>
       <article class="encontro">
         <span class="n">4</span>
         <div>
           <h3>As colunas da sabedoria</h3>
-          <p>O que sustenta a casa quando a emoção passa: fundamento, discernimento e maturidade.</p>
+          <p>Os pilares que sustentam a sua vida enraizada em Cristo.</p>
         </div>
       </article>
       <article class="encontro">
         <span class="n">5</span>
         <div>
           <h3>Intercessão profética</h3>
-          <p>Orar com a autoridade de quem aprendeu a reconhecer a voz do Pai.</p>
+          <p>Aprender a interceder o que está no coração de Jesus, acessando as profundezas em Deus.</p>
         </div>
       </article>
       <article class="encontro">
         <span class="n">6</span>
         <div>
           <h3>Tempo de colheita</h3>
-          <p>O que vem depois da obediência — e como não desperdiçar a colheita.</p>
+          <p>Processos para a colheita do fruto do Espírito.</p>
         </div>
       </article>
       <article class="encontro">
         <span class="n">7</span>
         <div>
           <h3>Família sacerdotal enraizada em Cristo</h3>
-          <p>Levar o avivamento para dentro de casa. O despertar não termina em você.</p>
+          <p>Liberação da unção profética do exército de famílias firmadas na Rocha.</p>
         </div>
       </article>
+
+      <article class="degrau-valor">
+        <p class="rotulo-valor">Os sete, por</p>
+        <p class="preco">R$ 49,90 <span>por mês</span></p>
+        <p>Todos os módulos, o encontro ao vivo de toda segunda e um ano de acesso. Você cancela quando quiser.</p>
+      </article>
+    </div>
+
+    <div class="grupo-cta">
+      <a class="cta" data-cta href="#">Quero fazer parte do exército Despertai</a>
     </div>
   </div>
 </section>
@@ -489,23 +522,11 @@ footer .assinatura{color:var(--creme-2);font-family:var(--serif);font-weight:700
     <p class="olho">Investimento</p>
     <h2>Entrar na mentoria</h2>
 
-    <div class="planos">
-      <div class="plano">
-        <span class="rotulo">Mensal</span>
-        <p class="valor">R$ 49</p>
-        <p class="obs">por mês, na recorrência. Cartão ou Pix recorrente. Você cancela quando quiser.</p>
-      </div>
-      <div class="plano destaque">
-        <span class="rotulo">Anual</span>
-        <p class="valor">R$ 497</p>
-        <p class="obs">à vista ou em até 12× no cartão. Um ano inteiro de acesso.</p>
-        <span class="economia">Economiza R$ 91</span>
-      </div>
-    </div>
+    <p class="discreto" style="max-width:46ch"><strong>R$ 49,90 por mês</strong>, com cancelamento quando você quiser. Existe também um plano anual, que aparece na página de pagamento. Cobrança segura pela Kiwify.</p>
 
-    <div class="grupo-cta" style="margin-top:1.8rem">
-      <a class="cta" data-cta href="#">Quero minha vaga</a>
-      <p class="cta-nota">Pagamento pela Kiwify · acesso liberado assim que o pagamento é aprovado</p>
+    <div class="grupo-cta" style="margin-top:1.6rem">
+      <a class="cta" data-cta href="#">Quero fazer parte do exército Despertai</a>
+      <p class="cta-nota">Acesso liberado assim que o pagamento é aprovado</p>
     </div>
 
     <div class="garantia" style="margin-top:2.4rem">
@@ -532,11 +553,11 @@ footer .assinatura{color:var(--creme-2);font-family:var(--serif);font-weight:700
       </details>
       <details>
         <summary>Quando é o encontro ao vivo?</summary>
-        <div class="resposta"><span class="falta">Toda [dia], às [hora].</span> É uma vez por semana, com a Cecília, e é onde o conteúdo das aulas vira conversa, oração e direção.</div>
+        <div class="resposta"><strong>Toda segunda-feira, às 19h30</strong> (horário de Brasília). É uma vez por semana, com a Cecília, e é onde o conteúdo das aulas vira conversa, oração e direção.</div>
       </details>
       <details>
         <summary>E se eu perder o encontro ao vivo?</summary>
-        <div class="resposta"><span class="falta">Confirmar: o encontro ao vivo fica gravado na área de membros?</span> As aulas dos módulos são gravadas e ficam sempre disponíveis — essas você assiste quando quiser.</div>
+        <div class="resposta">Sem problema: <strong>o encontro ao vivo também fica gravado</strong> na área de membros. Você assiste depois, no seu horário. As aulas dos módulos ficam sempre disponíveis do mesmo jeito.</div>
       </details>
       <details>
         <summary>Por quanto tempo tenho acesso?</summary>
@@ -548,7 +569,7 @@ footer .assinatura{color:var(--creme-2);font-family:var(--serif);font-weight:700
       </details>
       <details>
         <summary>Como funciona o pagamento? Posso cancelar?</summary>
-        <div class="resposta">No plano mensal a cobrança é recorrente, em cartão ou Pix, e você cancela quando quiser — o acesso segue até o fim do mês já pago. No plano anual você paga uma vez, à vista ou em até 12× no cartão.</div>
+        <div class="resposta">Há plano mensal, com cobrança recorrente em cartão ou Pix, que você cancela quando quiser — o acesso segue até o fim do mês já pago. E há plano anual, pago uma vez, com opção de parcelar no cartão. Os valores aparecem na página de pagamento.</div>
       </details>
       <details>
         <summary>Preciso ficar com a câmera aberta no encontro?</summary>
@@ -592,7 +613,7 @@ footer .assinatura{color:var(--creme-2);font-family:var(--serif);font-weight:700
 <section class="fecho com-chama">
   <img class="lamparina" src="lamparina.png" alt="" width="223" height="685">
   <p class="frase">Se você se reconheceu, não foi coincidência.</p>
-  <a class="cta" data-cta href="#investimento">Quero entrar na mentoria</a>
+  <a class="cta" data-cta href="#investimento">Quero fazer parte do exército Despertai</a>
   <p class="cta-nota" style="margin-top:1rem">7 dias de garantia · um ano de acesso</p>
 </section>
 
